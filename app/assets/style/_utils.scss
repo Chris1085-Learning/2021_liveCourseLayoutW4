@@ -57,10 +57,6 @@ $spacers: (
   }
 }
 
-%standard-boxshadow {
-  box-shadow: 3px 0 13px 0 rgba(100, 112, 134, 0.1);
-}
-
 .d-none {
   display: none;
 }
@@ -79,6 +75,9 @@ $spacers: (
 
 .flex-column {
   flex-direction: column;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 .justify-content-start {
   justify-content: flex-start;
@@ -125,31 +124,11 @@ $spacers: (
 .cursor-pointer {
   cursor: pointer;
 }
-
-@each $prop, $abbrev in (width: w, height: h) {
-  @each $num, $val in $sizes {
-    .#{$abbrev}-#{$num} {
-      #{$prop}: $val;
-    }
-  }
+.font-italic {
+  font-style: italic;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
-.text-white {
-  color: white;
-}
-
-.text-primary {
-  color: $primary-color;
-}
-
-.text-secondary {
-  color: $secondary-color;
-}
-
-.text-gray {
-  color: $text-gray-color;
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
 }

@@ -2,6 +2,28 @@ $primary-color: #650300;
 $secondary-color: #aa0601;
 $text-gray-color: #707070;
 $placeholder-color: rgba(0, 0, 0, 0.2);
+$white: white;
+$dark: black;
+
+$themes: (
+  'primary': $primary-color,
+  'secondary': $secondary-color,
+  'dgray': $text-gray-color,
+  'gray': $placeholder-color,
+  'dark': $dark,
+  'white': $white
+);
+
+@each $key, $value in $themes {
+  .bg-#{$key} {
+    background-color: $value;
+  }
+}
+@each $key, $value in $themes {
+  .text-#{$key} {
+    color: $value;
+  }
+}
 
 $sizes: (
   25: 25%,
@@ -10,7 +32,27 @@ $sizes: (
   100: 100%
 );
 
+@each $prop, $abbrev in (width: w, height: h) {
+  @each $num, $val in $sizes {
+    .#{$abbrev}-#{$num} {
+      #{$prop}: $val;
+    }
+  }
+}
+
 $pc-media: 992px;
 $pcs-media: 991px;
 $pad-media: 768px;
 $pads-media: 767px;
+
+@each $key in 3, 4, 5, 7, 9 {
+  .fw-#{$key} {
+    font-weight: $key * 100;
+  }
+}
+.fw-0 {
+  font-weight: normal;
+}
+.fw-b {
+  font-weight: bolder;
+}
