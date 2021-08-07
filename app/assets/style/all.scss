@@ -1,23 +1,16 @@
-$color: #00cc99;
+// base scss
+@import './helpers/reset';
+@import './helpers/variables';
+@import './helpers/mixin';
+@import './helpers/base';
+@import './utils';
 
-.header {
-  height: 200px;
-  background-color: #00cc99;
-}
+// layout scss
+@import './layout/grid';
+@import './layout/header';
+@import './layout/footer';
 
-.footer {
-  height: 200px;
-  background-color: #00cc99;
-}
+// pages scss
+@import './pages/index';
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  display: flex;
-  transition: all 0.5s;
-  &:hover {
-    width: 200px;
-    background-color: $color;
-  }
-}
+// components scss
