@@ -1,4 +1,4 @@
-$spacer: 1rem;
+$spacer: 2rem;
 $spacers: (
   0: 0,
   1: (
@@ -126,9 +126,4 @@ $spacers: (
 }
 .font-italic {
   font-style: italic;
-}
-
-.container {
-  max-width: 1110px;
-  margin: 0 auto;
 }

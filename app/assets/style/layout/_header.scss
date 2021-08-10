@@ -1,0 +1,104 @@
+.header-container {
+  padding-left: 88px;
+  padding-right: 88px;
+
+  @include pad {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  @include mobile {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.nav {
+  .menu-list {
+    margin-left: 64px;
+  }
+
+  .list-item-link {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+
+    &:hover {
+      color: rgb(190, 190, 190);
+    }
+  }
+
+  @include pad {
+    .list-item {
+      margin-left: 40px;
+    }
+  }
+
+  @include mobile {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    // display: none;
+    transition: transform 0.3s ease-out;
+    transform: scale(1, 0);
+    transform-origin: top;
+
+    .menu-list {
+      flex-direction: column;
+      margin: 0 auto;
+      background: $secondary-color;
+      text-align: center;
+
+      .list-item-link {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+
+        &:hover {
+          background: $primary-color;
+        }
+      }
+
+      .list-item {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.navbar-toggle:checked {
+}
+
+.navbar-toggle:checked ~ .nav {
+  transform: scale(1, 1);
+}
+
+.navbar-toggle:checked ~ .nav .list-item {
+  /*開啟時透明度為1*/
+  opacity: 1;
+}
+
+.logo {
+  a {
+    display: block;
+    background: url('../images/logo-new.png') no-repeat;
+    background-size: cover;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80px;
+    height: 48.57px;
+  }
+
+  @include mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    a {
+      width: 48px;
+      height: 29.14px;
+    }
+  }
+}
