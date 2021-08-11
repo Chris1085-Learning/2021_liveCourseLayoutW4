@@ -1,24 +1,14 @@
-// .container {
-//   margin-right: auto;
-//   margin-left: auto;
-
-//   @include pc {
-//     padding-right: 165px;
-//     padding-left: 165px;
-//   }
-
-//   @include pad {
-//     padding-left: 17px;
-//     padding-right: 17px;
-//   }
-
-//   @include mobile {
-//     padding-left: 17px;
-//     padding-right: 17px;
-//   }
-// }
-
 .container {
-  max-width: 1110px;
+  max-width: 1140px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
+
+  @include pad {
+    max-width: 720px;
+  }
+
+  @include mobile {
+    min-width: 100%;
+  }
 }

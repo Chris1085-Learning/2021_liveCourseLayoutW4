@@ -1,3 +1,8 @@
+$pc-media: 992px;
+$pcs-media: 991px;
+$pad-media: 768px;
+$pads-media: 767px;
+
 //電腦
 @mixin pc() {
   @media all and (min-width: $pc-media) {

@@ -41,13 +41,7 @@
   }
 
   .list-item-link {
-    text-decoration: none;
     font-size: 20px;
-    color: white;
-
-    &:hover {
-      color: rgb(190, 190, 190);
-    }
 
     @include mobile {
       display: block;
@@ -92,7 +86,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 5%;
+    left: 15px;
     display: flex;
     align-items: center;
   }
