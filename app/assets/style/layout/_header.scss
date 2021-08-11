@@ -13,9 +13,31 @@
   }
 }
 
+/*----------  navbar RWD  ----------*/
 .nav {
   .menu-list {
     margin-left: 64px;
+
+    @include mobile {
+      flex-direction: column;
+      margin: 0 auto;
+      background: $secondary-color;
+      text-align: center;
+    }
+  }
+
+  .list-item {
+    margin-left: 64px;
+
+    @include pad {
+      margin-left: 40px;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin: 0 auto;
+      opacity: 0;
+    }
   }
 
   .list-item-link {
@@ -26,11 +48,15 @@
     &:hover {
       color: rgb(190, 190, 190);
     }
-  }
 
-  @include pad {
-    .list-item {
-      margin-left: 40px;
+    @include mobile {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+
+      &:hover {
+        background: $primary-color;
+      }
     }
   }
 
@@ -38,32 +64,14 @@
     position: absolute;
     top: 100%;
     width: 100%;
-    // display: none;
     transition: transform 0.3s ease-out;
     transform: scale(1, 0);
     transform-origin: top;
-
-    .menu-list {
-      flex-direction: column;
-      margin: 0 auto;
-      background: $secondary-color;
-      text-align: center;
-
-      .list-item-link {
-        display: block;
-        width: 100%;
-        font-size: 16px;
-
-        &:hover {
-          background: $primary-color;
-        }
-      }
-
-      .list-item {
-        opacity: 0;
-      }
-    }
   }
+}
+
+.navbar-toggle {
+  visibility: hidden;
 }
 
 .navbar-toggle:checked {
@@ -74,8 +82,51 @@
 }
 
 .navbar-toggle:checked ~ .nav .list-item {
-  /*開啟時透明度為1*/
   opacity: 1;
+}
+
+.navbar-toggle-label {
+  display: none;
+  @include mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/*----------  hamburger icon css  ----------*/
+@include mobile {
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    width: 30px;
+    height: 2px;
+    background: white;
+  }
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+  }
+
+  .hamburger {
+    position: relative;
+  }
+  .hamburger::before,
+  .hamburger::after {
+    position: absolute;
+    left: 0;
+    content: '';
+  }
+  .hamburger::before {
+    top: 8px;
+  }
+  .hamburger::after {
+    bottom: 8px;
+  }
 }
 
 .logo {
