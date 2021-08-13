@@ -1,6 +1,7 @@
 $primary-color: #650300;
 $secondary-color: #aa0601;
 $text-gray-color: #707070;
+$light-pink: #fbf2f2;
 $placeholder-color: rgba(0, 0, 0, 0.2);
 $white: white;
 $dark: black;
@@ -11,7 +12,8 @@ $themes: (
   'dgray': $text-gray-color,
   'gray': $placeholder-color,
   'dark': $dark,
-  'white': $white
+  'white': $white,
+  'lpink': $light-pink
 );
 
 @each $key, $value in $themes {

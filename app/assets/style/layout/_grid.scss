@@ -12,3 +12,18 @@
     min-width: 100%;
   }
 }
+
+.contact-container {
+  max-width: 760px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @include pad {
+    max-width: 480px;
+  }
+
+  @include mobile {
+    min-width: 100%;
+  }
+}
