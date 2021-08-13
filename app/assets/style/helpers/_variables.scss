@@ -5,6 +5,8 @@ $light-pink: #fbf2f2;
 $placeholder-color: rgba(0, 0, 0, 0.2);
 $white: white;
 $dark: black;
+$dbrown: #5f3e2d;
+$brown: #b75929;
 
 $themes: (
   'primary': $primary-color,
@@ -13,7 +15,9 @@ $themes: (
   'gray': $placeholder-color,
   'dark': $dark,
   'white': $white,
-  'lpink': $light-pink
+  'lpink': $light-pink,
+  'dbrown': $dbrown,
+  'brown': $brown
 );
 
 @each $key, $value in $themes {
