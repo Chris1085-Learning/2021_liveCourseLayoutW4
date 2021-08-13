@@ -1,0 +1,25 @@
+.form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  @extend %noraml-font-setting;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 16px 15px 16px;
+  border: 1px solid #000;
+  border-radius: 0px;
+  @extend %noraml-font-setting;
+
+  &:focus {
+    outline: none;
+  }
+}

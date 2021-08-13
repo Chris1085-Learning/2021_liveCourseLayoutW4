@@ -6,7 +6,10 @@
 @import './utils';
 
 // components scss
+@import './components/checkbox';
 @import './components/list';
+@import './components/button';
+@import './components/form';
 
 // layout scss
 @import './layout/grid';

@@ -137,4 +137,73 @@ current: index
       </ul>
     </div>
   </section>
+
+  <section class="contact bg-lpink">
+    <div class="contact-container text-center text-dark">
+      <h3 class="title fw-9 mb-5">聯絡我們</h3>
+      <p class="contact-content text-left">
+        我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。
+      </p>
+
+      <form class="form">
+        <div class="form-group mb-3">
+          <label for="name" class="form-label">姓名</label>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            id="name"
+            aria-describedby="nameHelp"
+            placeholder="陳小明"
+            required
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="phone" class="form-label">聯絡電話</label>
+          <input
+            type="tel"
+            name="tel"
+            class="form-control"
+            id="phone"
+            aria-describedby="phoneHelp"
+            placeholder="0912-345-678"
+            required
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="email" class="form-label">電子郵件</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            placeholder="example@email.com"
+            required
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="opinion" class="form-label">意見反應</label>
+          <textarea
+            name="opinion"
+            id="opinion"
+            cols="30"
+            rows="10"
+            class="form-control"
+            placeholder="請輸入您的意見"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group mb-3 d-flex align-items-center">
+          <input id="terms-check" type="checkbox" class="terms-check" required />
+          <label for="terms-check">我已詳細閱讀以上條款內容，並同意接受內容所有款項規定</label>
+        </div>
+
+        <div class="btn-container d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary">確認送出</button>
+        </div>
+      </form>
+    </div>
+  </section>
 </main>
