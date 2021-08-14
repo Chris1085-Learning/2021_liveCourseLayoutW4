@@ -1779,29 +1779,35 @@ textarea {
       width: 16px;
       height: 16px; } }
 
-.store .container {
+.store .container,
+.faq .container {
   padding-top: 96px;
   padding-bottom: 130px; }
   @media all and (min-width: 768px) and (max-width: 991px) {
-    .store .container {
+    .store .container,
+    .faq .container {
       padding-top: 60px;
       padding-bottom: 66px; } }
   @media all and (max-width: 767px) {
-    .store .container {
+    .store .container,
+    .faq .container {
       padding-top: 28px;
       padding-bottom: 40px; } }
 
-.store .title {
+.store .title,
+.faq .title {
   font-size: 48px;
   line-height: 70px;
   padding-left: 16px;
   margin-bottom: 60px;
   border-left: 4px solid #650300; }
   @media all and (min-width: 768px) and (max-width: 991px) {
-    .store .title {
+    .store .title,
+    .faq .title {
       margin-bottom: 40px; } }
   @media all and (max-width: 767px) {
-    .store .title {
+    .store .title,
+    .faq .title {
       font-size: 28px;
       line-height: 40px;
       padding-left: 8px;
@@ -1991,5 +1997,55 @@ textarea {
       .store_detail .map {
         grid-column-start: 1;
         grid-column-end: 1; } }
+
+.faq .subtitle {
+  font-size: 32px;
+  line-height: 45px;
+  margin-bottom: 36px; }
+  @media all and (min-width: 768px) and (max-width: 991px) {
+    .faq .subtitle {
+      margin-bottom: 32px; } }
+  @media all and (max-width: 767px) {
+    .faq .subtitle {
+      font-size: 20px;
+      line-height: 29px;
+      font-weight: normal;
+      margin-bottom: 24px; } }
+
+.qa-group {
+  margin-bottom: 32px; }
+  @media all and (min-width: 768px) and (max-width: 991px) {
+    .qa-group {
+      margin-bottom: 24px; } }
+  @media all and (max-width: 767px) {
+    .qa-group {
+      margin-bottom: 20px; } }
+  .qa-group .question {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px; }
+    @media all and (max-width: 767px) {
+      .qa-group .question {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 8px; } }
+  .qa-group .answer-container {
+    padding-left: 95px; }
+    @media all and (min-width: 768px) and (max-width: 991px) {
+      .qa-group .answer-container {
+        padding-left: 60px; } }
+    @media all and (max-width: 767px) {
+      .qa-group .answer-container {
+        padding: 0; } }
+    .qa-group .answer-container .answer {
+      font-size: 16px;
+      line-height: 24px; }
+      @media all and (max-width: 767px) {
+        .qa-group .answer-container .answer {
+          font-size: 14px;
+          line-height: 21px; }
+          .qa-group .answer-container .answer .answer-sup {
+            display: block;
+            margin-top: 21px; } }
 
 /*# sourceMappingURL=all.css.map */
