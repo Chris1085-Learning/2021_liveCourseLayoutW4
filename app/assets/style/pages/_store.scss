@@ -1,0 +1,250 @@
+.store {
+  .container {
+    padding-top: 96px;
+    padding-bottom: 130px;
+
+    @include pad {
+      padding-top: 60px;
+      padding-bottom: 66px;
+    }
+
+    @include mobile {
+      padding-top: 28px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .title {
+    font-size: 48px;
+    line-height: 70px;
+    padding-left: 16px;
+    margin-bottom: 60px;
+    border-left: 4px solid $primary-color;
+
+    @include pad {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 40px;
+      padding-left: 8px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.region {
+  margin-bottom: 32px;
+  @include pad {
+    margin-bottom: 24px;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+
+  .form-title {
+    font-size: 24px;
+    line-height: 35px;
+
+    @include pad {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.store-list,
+.store_detail {
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include pad {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile {
+    grid-gap: 16px;
+    grid-template-columns: 1fr;
+  }
+
+  .list-item {
+    border: 1px solid #00000020;
+  }
+
+  .list-title {
+    padding: 16px 24px;
+    font-size: 24px;
+    line-height: 36px;
+    border-bottom: 1px solid #00000020;
+
+    @include pad {
+      padding: 8px 16px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @include mobile {
+      padding: 8px 24px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .list-img-link {
+    position: relative;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: rgba(white, 0.2);
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+    }
+  }
+
+  .list-img {
+    cursor: default;
+    width: 100%;
+    height: 224px;
+
+    @include pad {
+      height: 100%;
+    }
+
+    @include mobile {
+      height: 164px;
+    }
+  }
+
+  .list-right {
+    border-top: 1px solid #00000020;
+    font-size: 20px;
+    line-height: 30px;
+
+    @include pad {
+      font-size: 14px;
+      line-height: 21px;
+    }
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    .list-content-container {
+      padding: 16px 24px;
+    }
+
+    .list-content {
+      margin-bottom: 8px;
+
+      &:nth-child(2) {
+        .list-content-img {
+          padding: 2px;
+        }
+      }
+    }
+
+    .list-content-img {
+      height: 24px;
+      width: 24px;
+
+      @include pad {
+        height: 20px;
+        width: 20px;
+      }
+
+      @include mobile {
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    .list-content-info {
+      margin-left: 10px;
+
+      @include pad {
+        margin-left: 8px;
+      }
+
+      @include mobile {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.store_detail {
+  grid-template-columns: repeat(12, 1fr);
+
+  @include pad {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile {
+    grid-gap: 16px;
+    grid-template-columns: 1fr;
+  }
+
+  .list-item {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    @include pad {
+      border: none;
+      display: grid;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-gap: 30px;
+
+      grid-template-columns: repeat(2, 1fr);
+      .list-left {
+        grid-column-start: 1;
+        grid-column-end: 1;
+      }
+
+      .list-right {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        border: 1px solid #00000020;
+      }
+
+      .list-title {
+        border-bottom: 1px solid #00000020;
+      }
+    }
+
+    @include mobile {
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
+  }
+
+  .map {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 5;
+    grid-column-end: 12;
+
+    @include pad {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    @include mobile {
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
+  }
+}
