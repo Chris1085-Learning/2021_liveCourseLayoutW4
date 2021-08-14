@@ -76,6 +76,10 @@
     width: 50%;
     height: 304px;
     object-fit: cover;
+
+    @include mobile {
+      height: 148px;
+    }
   }
 }
 
