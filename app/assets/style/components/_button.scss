@@ -58,3 +58,36 @@
     background-color: $primary-color;
   }
 }
+
+.btn-dark {
+  outline: black solid 1px;
+  width: 100%;
+  color: white;
+  background-color: $dark;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 67px;
+  font-size: 19px;
+  line-height: 27px;
+  text-align: center;
+
+  @include pad {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 52px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include mobile {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 52px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    background-color: rgba($color: #000000, $alpha: 0.85);
+  }
+}
