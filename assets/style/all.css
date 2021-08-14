@@ -1614,6 +1614,9 @@ textarea {
   height: 304px;
   -o-object-fit: cover;
      object-fit: cover; }
+  @media all and (max-width: 767px) {
+    .glasses-banner .banner-img {
+      height: 148px; } }
 
 .optical {
   padding-top: 80px;
